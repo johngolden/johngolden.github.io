@@ -11,7 +11,7 @@ theoretical physicist with software and design aspirations
 
 ## interests
 
-`swift`, `network structures`, `complex systems`, `dogs`, `bread`, `woodworking`
+`swift`, `complex systems`, `dogs`, `bread`, `woodworking`
 
 ## background
 
