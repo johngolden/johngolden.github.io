@@ -1,11 +1,5 @@
-# Site settings
-title: john golden
-tag_text: john golden
-description: john golden
-
-# Build settings
-markdown: kramdown
-theme: solo
-exclude: ["README.md"]
-sass:
-  style: compressed
+theme: jekyll-theme-minimal
+title: evan dekhayser
+description: a place for my thoughts
+production_url: http://evandekhayser.com
+base_path: htpp://evandekhayser.com
