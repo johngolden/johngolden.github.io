@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>John Golden</title><link href="http://johngolden.github.io/" rel="alternate"></link><link href="http://johngolden.github.io/feeds/all.atom.xml" rel="self"></link><id>http://johngolden.github.io/</id><updated>2018-07-29T09:00:00-06:00</updated><entry><title>Starting over again</title><link href="http://johngolden.github.io/blog/2018/07/29/starting-over-again/" rel="alternate"></link><published>2018-07-29T09:00:00-06:00</published><updated>2018-07-29T09:00:00-06:00</updated><author><name>John Golden</name></author><id>tag:johngolden.github.io,2018-07-29:blog/2018/07/29/starting-over-again/</id><summary type="html">
+
+&lt;p&gt;Trying a simple blog post for the second time. how does this look?&lt;/p&gt;
+</summary><category term="tag2"></category><category term="tag3"></category><category term="tag with spaces"></category></entry><entry><title>hello world</title><link href="http://johngolden.github.io/blog/2017/09/02/hello-world/" rel="alternate"></link><published>2017-09-02T21:25:00-06:00</published><updated>2017-09-02T21:25:00-06:00</updated><author><name>John Golden</name></author><id>tag:johngolden.github.io,2017-09-02:blog/2017/09/02/hello-world/</id><summary type="html">
+
+&lt;p&gt;hello world&lt;/p&gt;
+</summary><category term="a tag"></category></entry></feed>
