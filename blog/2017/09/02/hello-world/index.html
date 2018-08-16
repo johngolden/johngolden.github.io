@@ -13,7 +13,7 @@
         <link rel="alternate" type="application/atom+xml" title="John Golden blog atom feed" href="/feeds/all.atom.xml" />
         <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700' rel='stylesheet' type='text/css'>
 
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
         <link rel="stylesheet" type="text/css" href="/theme/css/icons.css"/>
         <style>.highlight .hll { background-color: #ffffcc }
 .highlight .c { color: #60a0b0; font-style: italic } /* Comment */
@@ -76,35 +76,53 @@
 .highlight .vg { color: #bb60d5 } /* Name.Variable.Global */
 .highlight .vi { color: #bb60d5 } /* Name.Variable.Instance */
 .highlight .il { color: #40a070 } /* Literal.Number.Integer.Long */</style>
-        <style>body {
+        <style>:root {
+  --navbar-bkgrd: #2a2d33;
+  --navbar-text: #FFF;
+  --body-text: #222;
+  --header-text: #000;
+  --article-title-hover: #55BCC9;
+  --time-text: #9E9E9E;
+  --read-more-text: #FFF;
+  --read-more-bkgrd: #88d0d9;
+}
+
+body {
   margin: 0;
-  padding: 0;
+  padding: 0px;
   font: 15px 'Source Sans Pro', sans-serif;
   line-height: 1.6em;
-  color: #222;
+  color: var(--body-text);
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
 }
+
+.bg-personal-scheme {
+  color: var(--read-more-bkgrd);
+  background-color: var(--navbar-bkgrd);
+}
+
 a {
-  color: #007EE5;
+  color: var(--article-title-hover);
   text-decoration: none;
 }
 a:hover {
-  color: #007EE5;
+  color: var(--article-title-hover);
   text-decoration: none;
 }
 header.main-header {
   background: none repeat scroll 0% 0% #205F29;
-  margin-bottom: 0px;
+  margin-bottom: 20px;
 }
 header.main-header a {
-  color: #fff;
+  color: var(--navbar-text);
 }
 header.main-header .container {
   max-width: 1000px;
 }
 header.main-header .container nav a:hover {
-  background-color: #5C881C;
+  color: var(--read-more-bkgrd);
+  background-color: var(--navbar-bkgrd);
 }
 article {
   margin: 0;
@@ -118,17 +136,19 @@ article header {
   padding-bottom: 20px;
 }
 article header h1 {
+  margin-top: 30px;
   margin-bottom: 2px;
+  font-size: 36px;
   font-weight: 700;
-  color: #000;
+  color: var(--header-text);
 }
 article header time {
-  color: #9E9E9E;
+  color: var(--time-text);
   font-size: 0.85em;
   float: right;
 }
 article header time.left {
-  color: #9E9E9E;
+  color: var(--time-text);
   font-size: 0.85em;
   float: left;
 }
@@ -219,33 +239,31 @@ article .meta a.read_more,
 article .meta a.comments_btn {
   font-size: 14px;
   font-weight: 800;
-  padding: 10px 20px;
-  color: #205F29;
-  background: #FFF;
-  border: 1px solid #205F29;
+  padding: 5px 10px;
+  color: var(--read-more-text);
+  background: var(--read-more-bkgrd);
+  border-radius: 5px;
 }
 article .meta a.read_more:hover,
 article .meta a.comments_btn:hover {
-  color: #FFF;
-  background: #5C881C;
+  color: var(--read-more-bkgrd);
+  background: var(--read-more-text);
 }
 .index {
   max-width: 700px;
 }
-.index article header h2 {
+.index article header h1 a {
+  color: var(--header-text);
   font-size: 36px;
   margin-bottom: 2px;
   font-weight: 700;
 }
-.index article header h2 a {
-  color: #000;
-}
-.index article header h2 a:hover {
-  color: #007EE5;
+.index article header h1 a:hover {
+  color: var(--article-title-hover);
   text-decoration: none;
 }
 .index .separator {
-  padding: 40px 0 0 0;
+  padding: 10px 0 0 0;
   margin: 0 0 40px 0;
   height: 10px;
   border-bottom: solid 1px #CCC;
@@ -262,31 +280,31 @@ article .meta a.comments_btn:hover {
 }
 .index .pagination a {
   display: inline-block;
-  border: 2px solid #5C881C;
+  border: 2px solid var(--navbar-bkgrd);
   margin: 0 5px;
   padding: 8px 20px;
   font-weight: bold;
-  color: #5C881C;
+  color: #aad7ff;
 }
 .index .pagination a:hover {
   color: #FFF;
-  background: #5C881C;
+  background: var(--navbar-bkgrd);
 }
 .post {
   max-width: 700px;
 }
 .post h2:before {
-  content: "# ";
+  content: "";
   font-weight: bold;
   color: #DDD;
 }
 .post h3:before {
-  content: "## ";
+  content: "";
   font-weight: bold;
   color: #DDD;
 }
 .post h4:before {
-  content: "### ";
+  content: "";
   font-weight: bold;
   color: #DDD;
 }
@@ -378,30 +396,31 @@ article .meta a.comments_btn:hover {
 }</style>
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
 
     </head>
 
     <body>
-        <header class="navbar navbar-inverse bs-docs-nav">
-            <div class="container-fluid">
-                <div class="navbar-header">
-		  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#theNavbar">
-		    <span class="icon-bar"></span>
-		    <span class="icon-bar"></span>
-		    <span class="icon-bar"></span> 
-		  </button>
-                  <a class="navbar-brand" href="/" title="Home" class="title">John Golden</a>
-                </div>
-                <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation" id="theNavbar">
-            <ul class="nav navbar-nav navbar-right">
-                            <li><a href="/pages/about.html" title="About">About</a></li>
-                            <li><a href="/archives.html" title="Archive">Archive</a></li>
-                    </ul>
-                </nav>
-            </div>
-        </header>
+        <nav class="navbar navbar-expand-sm sticky-top navbar-dark bg-personal-scheme">
+          <a class="navbar-brand" href="/">John Golden</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="/pages/about.html">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/archives.html">Archive</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
 
         <div id="wrap">
 <div class="container post">
@@ -480,14 +499,13 @@ pre code {
 }</style>
 
         </div>
-<!--
-    <footer>
+
+<!---    <footer>
       <p>
-        © 2012-2017 John Golden, license <a href=""> </a>
+        © 2018 John Golden, license <a href=""> </a>
         unless otherwise noted.
-        Generated by <a href= "http://docs.getpelican.com/">Pelican</a>.
       </p>
     </footer>
--->
+--->
     </body>
 </html>
